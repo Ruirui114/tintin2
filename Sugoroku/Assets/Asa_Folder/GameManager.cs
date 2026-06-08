@@ -140,7 +140,12 @@ public class GameManager : MonoBehaviour
                 s_manager.Reset();
                 SceneManager.LoadScene("Result");
             }
-
+            else if (SceneManager.GetActiveScene().name == "Stage2")
+            {
+                s_manager.Score();
+                s_manager.Reset();
+                SceneManager.LoadScene("Result");
+            }
             return;
         }
 

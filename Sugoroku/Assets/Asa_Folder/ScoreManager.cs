@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -11,7 +12,6 @@ public class ScoreManager : MonoBehaviour
     public TextMeshProUGUI player1_comprehensivescoreText;
     public TextMeshProUGUI player2_comprehensivescoreText;
     public TextMeshProUGUI player3_comprehensivescoreText;
-
     //public int player1_score = 0;
     //public int player2_score = 0;
     //public int player3_score = 0;
