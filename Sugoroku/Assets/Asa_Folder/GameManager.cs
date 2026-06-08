@@ -229,6 +229,13 @@ public class GameManager : MonoBehaviour
             Debug.Log("‚à‚¤‚Æ‚Á‚½‚æ");
             StartCoroutine(ShowMessage("‚à‚¤‚Æ‚Á‚½‚æ")); NextTurn();
         }
+        else if (index <= 4)
+        {
+            isMoving = false;
+            isDice = true;
+
+            NextTurn();
+        }
         else
         {
             if (players[currentPlayer].isCPU == false)
@@ -259,6 +266,7 @@ public class GameManager : MonoBehaviour
                 }
                 else if (cpuChoice == 1)
                 {
+                    isMoving = false;
                     isDice = true;
 
                     NextTurn();
