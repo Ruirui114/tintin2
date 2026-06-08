@@ -19,6 +19,9 @@ public class GameManager : MonoBehaviour
 
     public TextMeshProUGUI oxygenText; // é_ëfêîUI
     public Text messageText;
+    public Text p_ItemText1;
+    public Text p_ItemText2;
+    public Text p_ItemText3;
 
     public Vector3 item_position;
     public int oxygen = 0; // é_ëf 50
@@ -32,6 +35,7 @@ public class GameManager : MonoBehaviour
     private bool isMoving = false;
     private bool isChoosing = false;
     private bool isDice = true;
+
     public int i = 0;
     public  Vector3 [] Item_Pos;
    
@@ -66,16 +70,43 @@ public class GameManager : MonoBehaviour
         // Ç‹ÇæñﬂÇÈëIëÇµÇƒÇ¢Ç»Ç¢Ç»ÇÁUIï\é¶
         if (!current.HasChosenDirection() && !current.IsReturning())
         {
-            ChoicePanel.SetActive(true);
-            isChoosing = true;
-            return;
+            if (players[currentPlayer].isCPU == false)
+            {
+                ChoicePanel.SetActive(true);
+                isChoosing = true;
+                return;
+            }
+            else
+            {
+                int cpuChoice = Random.Range(0, 2);
+
+                if (cpuChoice == 0)
+                {
+                    players[currentPlayer].StartReturn();
+
+                    isChoosing = false;
+                }
+                else if (cpuChoice == 1)
+                {
+                    players[currentPlayer].ContinueForward();
+
+                    isChoosing = false;
+                }
+            }
         }
 
         // ÉTÉCÉRÉç
-        if (Keyboard.current.spaceKey.wasPressedThisFrame && isDice == true || Mouse.current.leftButton.wasPressedThisFrame && isDice == true)
+        if (players[currentPlayer].isCPU == true)
         {
             isDice = false;
-            Debug.Log(players[currentPlayer].currentIndex);
+            //Debug.Log(players[currentPlayer].currentIndex);
+            dice.Roll();
+        }
+        if (Keyboard.current.spaceKey.wasPressedThisFrame && isDice == true ||
+            Mouse.current.leftButton.wasPressedThisFrame && isDice == true &&
+            players[currentPlayer].isCPU == false)
+        {
+            isDice = false;
             dice.Roll();
         }
     }
@@ -177,11 +208,6 @@ public class GameManager : MonoBehaviour
         {
             ItemPanel.SetActive(false);
         }
-        //if(diceValue <= 0)
-        //{
-        //    EndTurn();
-        //    return 0;
-        //}
 
         return diceValue;
     }
@@ -200,21 +226,39 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            isMoving = false;
-            Item_Index.Add(index);
-            ItemPanel.SetActive(true);
+            if (players[currentPlayer].isCPU == false)
+            {
+                isMoving = false;
+                Item_Index.Add(index);
+                ItemPanel.SetActive(true);
+            }
+            else
+            {
+                isMoving = false;
+                int cpuChoice = Random.Range(0, 2);
 
-            //isMoving = false;
+                if (cpuChoice == 0)
+                {
+                    item_position = players[currentPlayer].item_position;
+                    players[currentPlayer].Item();
 
-            //Item_Index.Add(index);
+                    if (i < Item_Pos.Length)
+                    {
+                        Item_Pos[i] = players[currentPlayer].item_position;
+                        i++;
+                    }
 
-            //if (players[currentPlayer].hasGoal == false)
-            //{
-            //    isItem = true;
-            //    ItemPanel.SetActive(true);
-            //}
-            //else
-            //    NextTurn();
+                    isDice = true;
+
+                    NextTurn();
+                }
+                else if (cpuChoice == 1)
+                {
+                    isDice = true;
+
+                    NextTurn();
+                }
+            }
         }
     }
 
@@ -313,6 +357,18 @@ public class GameManager : MonoBehaviour
             i++;
         }
 
+        if (currentPlayer == 0)
+        {
+            p_ItemText1.text = "" + players[currentPlayer].item;
+        }
+        if (currentPlayer == 1)
+        {
+            p_ItemText2.text = "" + players[currentPlayer].item;
+        }
+        if (currentPlayer == 2)
+        {
+            p_ItemText3.text = "" + players[currentPlayer].item;
+        }
         ItemPanel.SetActive(false);
         isDice = true;
 

@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using Unity.VisualScripting;
 
 public class PlayerMove : MonoBehaviour
 {
@@ -11,11 +12,11 @@ public class PlayerMove : MonoBehaviour
     public Vector3  item_position;
     public int currentIndex = 0;
     public int oxygen = 0;
+    public bool isCPU = false;
 
     private int direction = 1; // 1前進 -1逆走
     private bool isReturning = false; // Buttonフラグ
     private bool hasChosenDirection = true;
-
     void Start()
     {
         currentIndex = 4;//0
