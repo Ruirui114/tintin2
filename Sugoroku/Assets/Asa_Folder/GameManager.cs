@@ -23,6 +23,10 @@ public class GameManager : MonoBehaviour
     public Text p_ItemText2;
     public Text p_ItemText3;
 
+    public Text p_PointText1;
+    public Text p_PointText2;
+    public Text p_PointText3;
+
     public Vector3 item_position;
     public int oxygen = 0; // é_ëf 50
     public int baseDecrement = 1; // ñàÉ^Å[Éìå∏ÇÈé_ëfêî
@@ -30,7 +34,6 @@ public class GameManager : MonoBehaviour
     public int safety = 0;
     public List<int> Item_Index = new List<int>();
 
-    //public int item_n = PlayerMove.item;
     public static int currentPlayer = 0;
     private bool isMoving = false;
     private bool isChoosing = false;
@@ -99,7 +102,6 @@ public class GameManager : MonoBehaviour
         if (players[currentPlayer].isCPU == true)
         {
             isDice = false;
-            //Debug.Log(players[currentPlayer].currentIndex);
             dice.Roll();
         }
         if (Keyboard.current.spaceKey.wasPressedThisFrame && isDice == true ||
@@ -364,6 +366,26 @@ public class GameManager : MonoBehaviour
         item_position = players[currentPlayer].item_position;
         players[currentPlayer].Item();
 
+        TileData tile =
+        players[currentPlayer]
+        .points[players[currentPlayer].currentIndex]
+        .GetComponent<TileData>();
+
+        //Debug.Log("tile = " + tile);
+        //Debug.Log("point = " + tile.point);
+
+        if (tile != null && !tile.collected)
+        {
+            players[currentPlayer].point += tile.point;
+
+          //  Debug.Log("PlayerPoint = " +
+          //players[currentPlayer].point);
+
+            tile.collected = true;
+
+            UpdatePointUI();
+        }
+
         if (i < Item_Pos.Length)
         {
             Item_Pos[i] = players[currentPlayer].item_position;
@@ -382,6 +404,7 @@ public class GameManager : MonoBehaviour
         {
             p_ItemText3.text = "" + players[currentPlayer].item;
         }
+
         ItemPanel.SetActive(false);
         isDice = true;
 
@@ -391,8 +414,6 @@ public class GameManager : MonoBehaviour
     // âΩÇ‡ÇµÇ»Ç¢É{É^Éì
     public void OnClickItem2()
     {
-        //players[currentPlayer].ContinueForward();
-
         ItemPanel.SetActive(false);
         isDice = true;
 
@@ -405,5 +426,11 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(2f);
 
         messageText.text = "";
+    }
+    public void UpdatePointUI()
+    {
+        p_PointText1.text = "" + players[0].point;
+        p_PointText2.text = "" + players[1].point;
+        p_PointText3.text = "" + players[2].point;
     }
 }

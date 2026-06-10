@@ -129,6 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 17988810}
   - component: {fileID: 17988809}
+  - component: {fileID: 17988811}
   m_Layer: 0
   m_Name: Yellow_Point27
   m_TagString: Untagged
@@ -206,6 +207,99 @@ Transform:
   m_Children: []
   m_Father: {fileID: 510482970}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &17988811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17988808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 928d95e7b91d18046a5bfa9375b4411c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  point: 20
+  collected: 0
+--- !u!1 &39219375
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 39219376}
+  - component: {fileID: 39219378}
+  - component: {fileID: 39219377}
+  m_Layer: 5
+  m_Name: p_PointText1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &39219376
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39219375}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 510482970}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -400, y: -80}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &39219377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39219375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 20
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 0
+--- !u!222 &39219378
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39219375}
+  m_CullTransparentMesh: 1
 --- !u!1 &55067311
 GameObject:
   m_ObjectHideFlags: 0
@@ -216,6 +310,7 @@ GameObject:
   m_Component:
   - component: {fileID: 55067313}
   - component: {fileID: 55067312}
+  - component: {fileID: 55067314}
   m_Layer: 0
   m_Name: Yellow_Point28
   m_TagString: Untagged
@@ -293,6 +388,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 510482970}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &55067314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55067311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 928d95e7b91d18046a5bfa9375b4411c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  point: 20
+  collected: 0
 --- !u!1 &104236393
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,6 +570,7 @@ GameObject:
   m_Component:
   - component: {fileID: 110721865}
   - component: {fileID: 110721864}
+  - component: {fileID: 110721866}
   m_Layer: 0
   m_Name: Green_Point9
   m_TagString: Untagged
@@ -538,6 +648,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 510482970}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &110721866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 110721863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 928d95e7b91d18046a5bfa9375b4411c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  point: 5
+  collected: 0
 --- !u!1 &158472108
 GameObject:
   m_ObjectHideFlags: 0
@@ -548,6 +672,7 @@ GameObject:
   m_Component:
   - component: {fileID: 158472110}
   - component: {fileID: 158472109}
+  - component: {fileID: 158472111}
   m_Layer: 0
   m_Name: Yellow_Point21
   m_TagString: Untagged
@@ -625,6 +750,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 510482970}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &158472111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 158472108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 928d95e7b91d18046a5bfa9375b4411c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  point: 20
+  collected: 0
 --- !u!1 &160225977
 GameObject:
   m_ObjectHideFlags: 0
@@ -635,6 +774,7 @@ GameObject:
   m_Component:
   - component: {fileID: 160225979}
   - component: {fileID: 160225978}
+  - component: {fileID: 160225980}
   m_Layer: 0
   m_Name: Green_Point8
   m_TagString: Untagged
@@ -712,6 +852,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 510482970}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &160225980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160225977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 928d95e7b91d18046a5bfa9375b4411c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  point: 5
+  collected: 0
 --- !u!1 &166226920
 GameObject:
   m_ObjectHideFlags: 0
@@ -858,6 +1012,7 @@ GameObject:
   m_Component:
   - component: {fileID: 177803771}
   - component: {fileID: 177803770}
+  - component: {fileID: 177803772}
   m_Layer: 0
   m_Name: Red_Point18
   m_TagString: Untagged
@@ -935,6 +1090,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 510482970}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &177803772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177803769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 928d95e7b91d18046a5bfa9375b4411c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  point: 10
+  collected: 0
 --- !u!1 &222485238
 GameObject:
   m_ObjectHideFlags: 0
@@ -1190,6 +1359,7 @@ GameObject:
   m_Component:
   - component: {fileID: 272423047}
   - component: {fileID: 272423046}
+  - component: {fileID: 272423048}
   m_Layer: 0
   m_Name: Green_Point7
   m_TagString: Untagged
@@ -1267,6 +1437,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 510482970}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &272423048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 272423045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 928d95e7b91d18046a5bfa9375b4411c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  point: 5
+  collected: 0
 --- !u!1 &301645037
 GameObject:
   m_ObjectHideFlags: 0
@@ -1451,6 +1635,7 @@ GameObject:
   m_Component:
   - component: {fileID: 323987571}
   - component: {fileID: 323987570}
+  - component: {fileID: 323987572}
   m_Layer: 0
   m_Name: Red_Point17
   m_TagString: Untagged
@@ -1528,6 +1713,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 510482970}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &323987572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 323987569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 928d95e7b91d18046a5bfa9375b4411c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  point: 10
+  collected: 0
 --- !u!1 &399505828
 GameObject:
   m_ObjectHideFlags: 0
@@ -1538,6 +1737,7 @@ GameObject:
   m_Component:
   - component: {fileID: 399505830}
   - component: {fileID: 399505829}
+  - component: {fileID: 399505831}
   m_Layer: 0
   m_Name: Yellow_Point25
   m_TagString: Untagged
@@ -1615,6 +1815,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 510482970}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &399505831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 399505828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 928d95e7b91d18046a5bfa9375b4411c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  point: 20
+  collected: 0
 --- !u!1 &407592559
 GameObject:
   m_ObjectHideFlags: 0
@@ -1625,6 +1839,7 @@ GameObject:
   m_Component:
   - component: {fileID: 407592561}
   - component: {fileID: 407592560}
+  - component: {fileID: 407592562}
   m_Layer: 0
   m_Name: Red_Point15
   m_TagString: Untagged
@@ -1702,6 +1917,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 510482970}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &407592562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 407592559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 928d95e7b91d18046a5bfa9375b4411c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  point: 10
+  collected: 0
 --- !u!1 &412703856
 GameObject:
   m_ObjectHideFlags: 0
@@ -1944,6 +2173,85 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: -90}
+--- !u!1 &453078132
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 453078133}
+  - component: {fileID: 453078135}
+  - component: {fileID: 453078134}
+  m_Layer: 5
+  m_Name: p_PointText3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &453078133
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 453078132}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 510482970}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -280, y: -80}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &453078134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 453078132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 20
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 0
+--- !u!222 &453078135
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 453078132}
+  m_CullTransparentMesh: 1
 --- !u!1 &510482966
 GameObject:
   m_ObjectHideFlags: 0
@@ -2081,6 +2389,9 @@ RectTransform:
   - {fileID: 1453853305}
   - {fileID: 574136287}
   - {fileID: 2088414557}
+  - {fileID: 39219376}
+  - {fileID: 1305592346}
+  - {fileID: 453078133}
   - {fileID: 109031453}
   - {fileID: 104236394}
   - {fileID: 1420860242}
@@ -2101,6 +2412,7 @@ GameObject:
   m_Component:
   - component: {fileID: 523076159}
   - component: {fileID: 523076158}
+  - component: {fileID: 523076160}
   m_Layer: 0
   m_Name: Bule_Point1
   m_TagString: Untagged
@@ -2178,6 +2490,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 510482970}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &523076160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 523076157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 928d95e7b91d18046a5bfa9375b4411c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  point: 1
+  collected: 0
 --- !u!1 &574136286
 GameObject:
   m_ObjectHideFlags: 0
@@ -2267,6 +2593,7 @@ GameObject:
   m_Component:
   - component: {fileID: 577281173}
   - component: {fileID: 577281172}
+  - component: {fileID: 577281174}
   m_Layer: 0
   m_Name: Bule_Point3
   m_TagString: Untagged
@@ -2344,6 +2671,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 510482970}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &577281174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577281171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 928d95e7b91d18046a5bfa9375b4411c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  point: 1
+  collected: 0
 --- !u!1 &584440262
 GameObject:
   m_ObjectHideFlags: 0
@@ -2354,6 +2695,7 @@ GameObject:
   m_Component:
   - component: {fileID: 584440264}
   - component: {fileID: 584440263}
+  - component: {fileID: 584440265}
   m_Layer: 0
   m_Name: Bule_Point2
   m_TagString: Untagged
@@ -2431,6 +2773,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 510482970}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &584440265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584440262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 928d95e7b91d18046a5bfa9375b4411c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  point: 1
+  collected: 0
 --- !u!1 &596681876
 GameObject:
   m_ObjectHideFlags: 0
@@ -2751,6 +3107,7 @@ GameObject:
   m_Component:
   - component: {fileID: 757189617}
   - component: {fileID: 757189616}
+  - component: {fileID: 757189618}
   m_Layer: 0
   m_Name: Red_Point19
   m_TagString: Untagged
@@ -2828,6 +3185,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 510482970}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &757189618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 757189615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 928d95e7b91d18046a5bfa9375b4411c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  point: 10
+  collected: 0
 --- !u!1 &782184039
 GameObject:
   m_ObjectHideFlags: 0
@@ -3126,6 +3497,7 @@ GameObject:
   m_Component:
   - component: {fileID: 889038150}
   - component: {fileID: 889038149}
+  - component: {fileID: 889038151}
   m_Layer: 0
   m_Name: Green_Point13
   m_TagString: Untagged
@@ -3203,6 +3575,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 510482970}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &889038151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889038148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 928d95e7b91d18046a5bfa9375b4411c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  point: 5
+  collected: 0
 --- !u!1 &960224916
 GameObject:
   m_ObjectHideFlags: 0
@@ -3384,6 +3770,7 @@ GameObject:
   m_Component:
   - component: {fileID: 991331411}
   - component: {fileID: 991331410}
+  - component: {fileID: 991331412}
   m_Layer: 0
   m_Name: Red_Point16
   m_TagString: Untagged
@@ -3461,6 +3848,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 510482970}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &991331412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 991331409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 928d95e7b91d18046a5bfa9375b4411c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  point: 10
+  collected: 0
 --- !u!1 &995148475
 GameObject:
   m_ObjectHideFlags: 0
@@ -3471,6 +3872,7 @@ GameObject:
   m_Component:
   - component: {fileID: 995148477}
   - component: {fileID: 995148476}
+  - component: {fileID: 995148478}
   m_Layer: 0
   m_Name: Bule_Point5
   m_TagString: Untagged
@@ -3548,6 +3950,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 510482970}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &995148478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 995148475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 928d95e7b91d18046a5bfa9375b4411c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  point: 1
+  collected: 0
 --- !u!1 &1002871686
 GameObject:
   m_ObjectHideFlags: 0
@@ -3558,6 +3974,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1002871688}
   - component: {fileID: 1002871687}
+  - component: {fileID: 1002871689}
   m_Layer: 0
   m_Name: Green_Point12
   m_TagString: Untagged
@@ -3635,6 +4052,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 510482970}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1002871689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1002871686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 928d95e7b91d18046a5bfa9375b4411c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  point: 5
+  collected: 0
 --- !u!1 &1070674214 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7322479139939081348, guid: a23feaf1d7a3acb449af59db52c27e97, type: 3}
@@ -3700,6 +4131,7 @@ MonoBehaviour:
   currentIndex: 0
   oxygen: 0
   isCPU: 0
+  point: 0
 --- !u!1 &1095503999
 GameObject:
   m_ObjectHideFlags: 0
@@ -3785,6 +4217,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1115487902}
   - component: {fileID: 1115487901}
+  - component: {fileID: 1115487903}
   m_Layer: 0
   m_Name: Yellow_Point26
   m_TagString: Untagged
@@ -3862,6 +4295,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 510482970}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1115487903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115487900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 928d95e7b91d18046a5bfa9375b4411c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  point: 20
+  collected: 0
 --- !u!1 &1133342614
 GameObject:
   m_ObjectHideFlags: 0
@@ -3872,6 +4319,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1133342616}
   - component: {fileID: 1133342615}
+  - component: {fileID: 1133342617}
   m_Layer: 0
   m_Name: Red_Point20
   m_TagString: Untagged
@@ -3949,6 +4397,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 510482970}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1133342617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1133342614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 928d95e7b91d18046a5bfa9375b4411c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  point: 10
+  collected: 0
 --- !u!1 &1144344310
 GameObject:
   m_ObjectHideFlags: 0
@@ -3959,6 +4421,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1144344312}
   - component: {fileID: 1144344311}
+  - component: {fileID: 1144344313}
   m_Layer: 0
   m_Name: Yellow_Point23
   m_TagString: Untagged
@@ -4036,6 +4499,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 510482970}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1144344313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1144344310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 928d95e7b91d18046a5bfa9375b4411c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  point: 20
+  collected: 0
 --- !u!1 &1176165430 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7322479139939081348, guid: a23feaf1d7a3acb449af59db52c27e97, type: 3}
@@ -4096,6 +4573,7 @@ MonoBehaviour:
   currentIndex: 0
   oxygen: 0
   isCPU: 0
+  point: 0
 --- !u!4 &1176165432 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7322479139939081351, guid: a23feaf1d7a3acb449af59db52c27e97, type: 3}
@@ -4316,6 +4794,9 @@ MonoBehaviour:
   p_ItemText1: {fileID: 109031455}
   p_ItemText2: {fileID: 104236396}
   p_ItemText3: {fileID: 1420860240}
+  p_PointText1: {fileID: 39219377}
+  p_PointText2: {fileID: 1305592347}
+  p_PointText3: {fileID: 453078134}
   item_position: {x: 0, y: 0, z: 0}
   oxygen: 50
   baseDecrement: 1
@@ -4549,6 +5030,85 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1256454670}
+  m_CullTransparentMesh: 1
+--- !u!1 &1305592345
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1305592346}
+  - component: {fileID: 1305592348}
+  - component: {fileID: 1305592347}
+  m_Layer: 5
+  m_Name: p_PointText2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1305592346
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1305592345}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 510482970}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -340, y: -80}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1305592347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1305592345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 20
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 0
+--- !u!222 &1305592348
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1305592345}
   m_CullTransparentMesh: 1
 --- !u!1 &1323695827
 GameObject:
@@ -4802,6 +5362,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1424395900}
   - component: {fileID: 1424395899}
+  - component: {fileID: 1424395901}
   m_Layer: 0
   m_Name: Bule_Point4
   m_TagString: Untagged
@@ -4879,6 +5440,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 510482970}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1424395901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1424395898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 928d95e7b91d18046a5bfa9375b4411c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  point: 1
+  collected: 0
 --- !u!1 &1448320200
 GameObject:
   m_ObjectHideFlags: 0
@@ -4889,6 +5464,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1448320202}
   - component: {fileID: 1448320201}
+  - component: {fileID: 1448320203}
   m_Layer: 0
   m_Name: Yellow_Point24
   m_TagString: Untagged
@@ -4966,6 +5542,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 510482970}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1448320203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1448320200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 928d95e7b91d18046a5bfa9375b4411c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  point: 20
+  collected: 0
 --- !u!1 &1451096239
 GameObject:
   m_ObjectHideFlags: 0
@@ -5251,6 +5841,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1520403016}
   - component: {fileID: 1520403015}
+  - component: {fileID: 1520403017}
   m_Layer: 0
   m_Name: Red_Point14
   m_TagString: Untagged
@@ -5328,6 +5919,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 510482970}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1520403017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520403014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 928d95e7b91d18046a5bfa9375b4411c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  point: 10
+  collected: 0
 --- !u!1 &1558938703
 GameObject:
   m_ObjectHideFlags: 0
@@ -5425,6 +6030,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1603740278}
   - component: {fileID: 1603740277}
+  - component: {fileID: 1603740279}
   m_Layer: 0
   m_Name: Green_Point10
   m_TagString: Untagged
@@ -5502,6 +6108,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 510482970}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1603740279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603740276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 928d95e7b91d18046a5bfa9375b4411c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  point: 5
+  collected: 0
 --- !u!1 &1604572087
 GameObject:
   m_ObjectHideFlags: 0
@@ -5591,6 +6211,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1620614489}
   - component: {fileID: 1620614488}
+  - component: {fileID: 1620614490}
   m_Layer: 0
   m_Name: Bule_Point0
   m_TagString: Untagged
@@ -5668,6 +6289,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 510482970}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1620614490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620614487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 928d95e7b91d18046a5bfa9375b4411c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  point: 1
+  collected: 0
 --- !u!1 &1629016306
 GameObject:
   m_ObjectHideFlags: 0
@@ -5678,6 +6313,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1629016308}
   - component: {fileID: 1629016307}
+  - component: {fileID: 1629016309}
   m_Layer: 0
   m_Name: Yellow_Point22
   m_TagString: Untagged
@@ -5755,6 +6391,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 510482970}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1629016309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1629016306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 928d95e7b91d18046a5bfa9375b4411c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  point: 20
+  collected: 0
 --- !u!1 &1843893378
 GameObject:
   m_ObjectHideFlags: 0
@@ -6032,6 +6682,7 @@ MonoBehaviour:
   currentIndex: 0
   oxygen: 0
   isCPU: 0
+  point: 0
 --- !u!1 &1900516922
 GameObject:
   m_ObjectHideFlags: 0
@@ -6311,6 +6962,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1985924214}
   - component: {fileID: 1985924213}
+  - component: {fileID: 1985924215}
   m_Layer: 0
   m_Name: Bule_Point6
   m_TagString: Untagged
@@ -6388,6 +7040,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 510482970}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1985924215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1985924212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 928d95e7b91d18046a5bfa9375b4411c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  point: 1
+  collected: 0
 --- !u!1 &2042364599
 GameObject:
   m_ObjectHideFlags: 0
@@ -6398,6 +7064,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2042364601}
   - component: {fileID: 2042364600}
+  - component: {fileID: 2042364602}
   m_Layer: 0
   m_Name: Green_Point11
   m_TagString: Untagged
@@ -6475,6 +7142,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 510482970}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2042364602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042364599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 928d95e7b91d18046a5bfa9375b4411c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  point: 5
+  collected: 0
 --- !u!1 &2088414554
 GameObject:
   m_ObjectHideFlags: 0

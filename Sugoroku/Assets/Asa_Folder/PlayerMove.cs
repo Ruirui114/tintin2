@@ -14,6 +14,8 @@ public class PlayerMove : MonoBehaviour
     public int oxygen = 0;
     public bool isCPU = false;
 
+    public int point = 0;
+
     private int direction = 1; // 1前進 -1逆走
     private bool isReturning = false; // Buttonフラグ
     private bool hasChosenDirection = true;
