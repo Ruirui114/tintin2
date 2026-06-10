@@ -3699,7 +3699,7 @@ MonoBehaviour:
   item_position: {x: 0, y: 0, z: 0}
   currentIndex: 0
   oxygen: 0
-  isCPU: 1
+  isCPU: 0
 --- !u!1 &1095503999
 GameObject:
   m_ObjectHideFlags: 0
@@ -4095,7 +4095,7 @@ MonoBehaviour:
   item_position: {x: 0, y: 0, z: 0}
   currentIndex: 0
   oxygen: 0
-  isCPU: 1
+  isCPU: 0
 --- !u!4 &1176165432 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7322479139939081351, guid: a23feaf1d7a3acb449af59db52c27e97, type: 3}
