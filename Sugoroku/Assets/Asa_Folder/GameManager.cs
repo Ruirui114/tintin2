@@ -39,9 +39,10 @@ public class GameManager : MonoBehaviour
     private bool isChoosing = false;
     private bool isDice = true;
 
+    public int index = 0;
     public int i = 0;
-    public  Vector3 [] Item_Pos;
-   
+    public Vector3[] Item_Pos;
+
     bool Next = true;
 
     void Start()
@@ -68,7 +69,7 @@ public class GameManager : MonoBehaviour
         if (isMoving || isChoosing) return;
 
         SkipGoalPlayers();
-     
+
         PlayerMove current = players[currentPlayer];
         // ‚Ü‚¾–ß‚é‘I‘ð‚µ‚Ä‚¢‚È‚¢‚È‚çUI•\Ž¦
         if (!current.HasChosenDirection() && !current.IsReturning())
@@ -167,14 +168,14 @@ public class GameManager : MonoBehaviour
     {
         int consumption = baseDecrement + players[currentPlayer].item;
 
-        oxygen -= consumption ;
+        oxygen -= consumption;
 
         if (oxygen <= 0)
         {
             oxygen = 0;
-            if(SceneManager.GetActiveScene().name == "Stage")
+            if (SceneManager.GetActiveScene().name == "Stage")
             {
-                for (int i = 0;i <= 2;i++)
+                for (int i = 0; i <= 2; i++)
                 {
                     if (players[i].hasGoal == false)
                     {
@@ -184,7 +185,7 @@ public class GameManager : MonoBehaviour
                 }
                 s_manager.Score();
                 s_manager.Reset();
-                SceneManager.LoadScene("Stage1");
+                SceneManager.LoadScene("Result");
             }
             else if (SceneManager.GetActiveScene().name == "Stage1")
             {
@@ -198,7 +199,7 @@ public class GameManager : MonoBehaviour
                 }
                 s_manager.Score();
                 s_manager.Reset();
-                SceneManager.LoadScene("Stage2");
+                SceneManager.LoadScene("Result");
             }
 
         }
@@ -211,7 +212,7 @@ public class GameManager : MonoBehaviour
     {
         diceValue -= players[currentPlayer].item;
 
-        if(diceValue < 1)
+        if (diceValue < 1)
         {
             ItemPanel.SetActive(false);
         }
@@ -220,22 +221,16 @@ public class GameManager : MonoBehaviour
     }
     void EndTurn()
     {
-        int index = players[currentPlayer].currentIndex;
+        index = players[currentPlayer].currentIndex;
 
         ConsumeOxygen();
 
-        if (Item_Index.Contains(index))
+        if (Item_Index.Contains(index) || index <= 4)
         {
             isMoving = false;
             isDice = true;
             Debug.Log("‚à‚¤‚Æ‚Á‚½‚æ");
-            StartCoroutine(ShowMessage("‚à‚¤‚Æ‚Á‚½‚æ")); NextTurn();
-        }
-        else if (index <= 4)
-        {
-            isMoving = false;
-            isDice = true;
-
+            StartCoroutine(ShowMessage("‚à‚¤‚Æ‚Á‚½‚æ")); 
             NextTurn();
         }
         else
@@ -243,7 +238,6 @@ public class GameManager : MonoBehaviour
             if (players[currentPlayer].isCPU == false)
             {
                 isMoving = false;
-                Item_Index.Add(index);
                 ItemPanel.SetActive(true);
             }
             else
@@ -366,20 +360,16 @@ public class GameManager : MonoBehaviour
         item_position = players[currentPlayer].item_position;
         players[currentPlayer].Item();
 
+        Item_Index.Add(index);
+
         TileData tile =
         players[currentPlayer]
         .points[players[currentPlayer].currentIndex]
         .GetComponent<TileData>();
 
-        //Debug.Log("tile = " + tile);
-        //Debug.Log("point = " + tile.point);
-
         if (tile != null && !tile.collected)
         {
             players[currentPlayer].point += tile.point;
-
-          //  Debug.Log("PlayerPoint = " +
-          //players[currentPlayer].point);
 
             tile.collected = true;
 
