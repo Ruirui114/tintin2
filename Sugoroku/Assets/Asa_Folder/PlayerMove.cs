@@ -17,7 +17,7 @@ public class PlayerMove : MonoBehaviour
     public int point = 0;
 
     private int direction = 1; // 1前進 -1逆走
-    private bool isReturning = false; // Buttonフラグ
+    public bool isReturning = false; // Buttonフラグ
     private bool hasChosenDirection = true;
     void Start()
     {
@@ -60,14 +60,6 @@ public class PlayerMove : MonoBehaviour
 
             // 更新
             currentIndex = nextIndex;
-
-            // ゴール判定
-            if (currentIndex < 4 && isReturning)
-            {
-                hasGoal = true;
-                oxygen = g_manager.oxygen;
-                break;
-            }
 
             Vector3 target = points[currentIndex].position;
 

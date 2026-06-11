@@ -5,6 +5,7 @@ public class SystemManager : MonoBehaviour
 {
     public PlayerMove[] players;
     public int []score;
+    public int[] comprehensivescore;
     public static SystemManager Instance;
     void Awake()
     {
@@ -14,6 +15,7 @@ public class SystemManager : MonoBehaviour
 
             DontDestroyOnLoad(gameObject);
             score = new int[3];
+            comprehensivescore = new int[3];
         }
         else
         {
@@ -27,7 +29,8 @@ public class SystemManager : MonoBehaviour
     {
         for (int i = 0; i < players.Length; i++)
         {
-            score[i] += players[i].item + players[i].oxygen;
+            score[i] = players[i].point;
+            comprehensivescore[i] += players[i].point + players[i].oxygen;
         }
     }
 

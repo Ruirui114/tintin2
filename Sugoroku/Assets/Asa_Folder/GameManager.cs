@@ -68,7 +68,7 @@ public class GameManager : MonoBehaviour
     {
         if (isMoving || isChoosing) return;
 
-        SkipGoalPlayers();
+        //SkipGoalPlayers();
 
         PlayerMove current = players[currentPlayer];
         // まだ戻る選択していないならUI表示
@@ -116,18 +116,21 @@ public class GameManager : MonoBehaviour
 
     void SkipGoalPlayers()
     {
-        int goalCount = 0;
+        //int goalCount = 0;
 
-        foreach (var p in players)
-        {
-            if (p.hasGoal)
-            {
-                goalCount++;
-            }
-        }
+        //foreach (var p in players)
+        //{
+        //    if (p.hasGoal)
+        //    {
+        //        goalCount++;
+        //    }
+        //}
 
         // 全員ゴール
-        if (goalCount >= players.Length)
+        
+        if (players[0].hasGoal == true
+            && players[1].hasGoal == true
+            && players[2].hasGoal == true)
         {
             enabled = false;
 
@@ -135,18 +138,21 @@ public class GameManager : MonoBehaviour
             {
                 s_manager.Score();
                 s_manager.Reset();
+                Item_Index.Clear();
                 SceneManager.LoadScene("Result");
             }
             else if (SceneManager.GetActiveScene().name == "Stage1")
             {
                 s_manager.Score();
                 s_manager.Reset();
+                Item_Index.Clear();
                 SceneManager.LoadScene("Result");
             }
             else if (SceneManager.GetActiveScene().name == "Stage2")
             {
                 s_manager.Score();
                 s_manager.Reset();
+                Item_Index.Clear();
                 SceneManager.LoadScene("Result");
             }
             return;
@@ -185,6 +191,7 @@ public class GameManager : MonoBehaviour
                 }
                 s_manager.Score();
                 s_manager.Reset();
+                Item_Index.Clear();
                 SceneManager.LoadScene("Result");
             }
             else if (SceneManager.GetActiveScene().name == "Stage1")
@@ -199,6 +206,7 @@ public class GameManager : MonoBehaviour
                 }
                 s_manager.Score();
                 s_manager.Reset();
+                Item_Index.Clear();
                 SceneManager.LoadScene("Result");
             }
 
@@ -221,16 +229,33 @@ public class GameManager : MonoBehaviour
     }
     void EndTurn()
     {
+        Debug.Log(players[currentPlayer].currentIndex);
+        // ゴール判定
+        if (players[currentPlayer].currentIndex <= 4 && players[currentPlayer].isReturning)
+        {
+            players[currentPlayer].hasGoal = true;
+            players[currentPlayer].oxygen = oxygen;
+        }
+
+        SkipGoalPlayers();
+
         index = players[currentPlayer].currentIndex;
 
         ConsumeOxygen();
 
-        if (Item_Index.Contains(index) || index <= 4)
+        if (Item_Index.Contains(index))
         {
             isMoving = false;
             isDice = true;
             Debug.Log("もうとったよ");
             StartCoroutine(ShowMessage("もうとったよ")); 
+            NextTurn();
+        }
+        else if(index <= 4)
+        {
+            isMoving = false;
+            isDice = true;
+
             NextTurn();
         }
         else

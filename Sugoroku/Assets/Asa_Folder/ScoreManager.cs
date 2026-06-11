@@ -18,10 +18,19 @@ public class ScoreManager : MonoBehaviour
         player1_scoreText.text =
             SystemManager.Instance.score[0].ToString();
 
+        player1_comprehensivescoreText.text =
+            SystemManager.Instance.comprehensivescore[0].ToString();
+
         player2_scoreText.text =
-            SystemManager.Instance.score[1].ToString();
+           SystemManager.Instance.score[1].ToString();
+
+        player2_comprehensivescoreText.text =
+            SystemManager.Instance.comprehensivescore[1].ToString();
 
         player3_scoreText.text =
-            SystemManager.Instance.score[2].ToString();
+           SystemManager.Instance.score[2].ToString();
+
+        player3_comprehensivescoreText.text =
+            SystemManager.Instance.comprehensivescore[2].ToString();
     }
 }

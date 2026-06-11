@@ -49,7 +49,6 @@ public class Dice : MonoBehaviour
         // 最終結果を表示
         sr.sprite = diceSprites[result];
         int diceValue = result + 1;
-
         diceValue = GameManager.Instance.Dice2(diceValue);
 
         //if (diceValue < 0)
