@@ -27,6 +27,8 @@ public class GameManager : MonoBehaviour
     public Text p_PointText2;
     public Text p_PointText3;
 
+    public Text Playernum;
+
     public Vector3 item_position;
     public int oxygen = 0; // 酸素 50
     public int baseDecrement = 1; // 毎ターン減る酸素数
@@ -68,8 +70,8 @@ public class GameManager : MonoBehaviour
     {
         if (isMoving || isChoosing) return;
 
-        //SkipGoalPlayers();
-
+        Playernum.text = "" + (currentPlayer + 1);
+    
         PlayerMove current = players[currentPlayer];
         // まだ戻る選択していないならUI表示
         if (!current.HasChosenDirection() && !current.IsReturning())
@@ -102,6 +104,7 @@ public class GameManager : MonoBehaviour
         // サイコロ
         if (players[currentPlayer].isCPU == true)
         {
+            Debug.Log($"プレイヤー: {currentPlayer}, 今の位置: {players[currentPlayer].currentIndex}");
             isDice = false;
             dice.Roll();
         }
@@ -109,6 +112,7 @@ public class GameManager : MonoBehaviour
             Mouse.current.leftButton.wasPressedThisFrame && isDice == true &&
             players[currentPlayer].isCPU == false)
         {
+            Debug.Log($"プレイヤー: {currentPlayer}, 今の位置: {players[currentPlayer].currentIndex}");
             isDice = false;
             dice.Roll();
         }
@@ -146,22 +150,16 @@ public class GameManager : MonoBehaviour
                 s_manager.Score();
                 s_manager.Reset();
                 Item_Index.Clear();
-                SceneManager.LoadScene("Result");
+                SceneManager.LoadScene("Result1");
             }
             else if (SceneManager.GetActiveScene().name == "Stage2")
             {
                 s_manager.Score();
                 s_manager.Reset();
                 Item_Index.Clear();
-                SceneManager.LoadScene("Result");
+                SceneManager.LoadScene("LastResult");
             }
             return;
-        }
-
-        // ゴール済みプレイヤーを飛ばす
-        while (players[currentPlayer].hasGoal)
-        {
-            NextTurn();
         }
     }
     // ほかのスクリプトからアクセスできるようになる(シングルトン設定)
@@ -207,7 +205,22 @@ public class GameManager : MonoBehaviour
                 s_manager.Score();
                 s_manager.Reset();
                 Item_Index.Clear();
-                SceneManager.LoadScene("Result");
+                SceneManager.LoadScene("Resul1");
+            }
+            else if (SceneManager.GetActiveScene().name == "Stage2")
+            {
+                for (int i = 0; i <= 2; i++)
+                {
+                    if (players[i].hasGoal == false)
+                    {
+                        players[i].item = 0;
+                        players[i].oxygen = 0;
+                    }
+                }
+                s_manager.Score();
+                s_manager.Reset();
+                Item_Index.Clear();
+                SceneManager.LoadScene("LastResult");
             }
 
         }
@@ -229,38 +242,39 @@ public class GameManager : MonoBehaviour
     }
     void EndTurn()
     {
-        Debug.Log(players[currentPlayer].currentIndex);
+        Debug.Log($"プレイヤー: {currentPlayer}, 最後の位置: {players[currentPlayer].currentIndex}");
         // ゴール判定
         if (players[currentPlayer].currentIndex <= 4 && players[currentPlayer].isReturning)
         {
+            Debug.Log($"プレイヤー: {currentPlayer}, ゴール");
             players[currentPlayer].hasGoal = true;
             players[currentPlayer].oxygen = oxygen;
         }
+
+        ConsumeOxygen();
 
         SkipGoalPlayers();
 
         index = players[currentPlayer].currentIndex;
 
-        ConsumeOxygen();
-
-        if (Item_Index.Contains(index))
+        if(index <= 4)
         {
             isMoving = false;
             isDice = true;
-            Debug.Log("もうとったよ");
-            StartCoroutine(ShowMessage("もうとったよ")); 
+
             NextTurn();
         }
-        else if(index <= 4)
+        else if (Item_Index.Contains(index))
         {
             isMoving = false;
             isDice = true;
-
+            //Debug.Log("もうとったよ");
+            StartCoroutine(ShowMessage("もうとったよ"));
             NextTurn();
         }
         else
         {
-            if (players[currentPlayer].isCPU == false)
+            if (players[currentPlayer].isCPU == false && index > 4)
             {
                 isMoving = false;
                 ItemPanel.SetActive(true);
@@ -270,7 +284,7 @@ public class GameManager : MonoBehaviour
                 isMoving = false;
                 int cpuChoice = Random.Range(0, 2);
 
-                if (cpuChoice == 0)
+                if (cpuChoice == 0 && index > 4)
                 {
                     item_position = players[currentPlayer].item_position;
                     players[currentPlayer].Item();
@@ -285,7 +299,7 @@ public class GameManager : MonoBehaviour
 
                     NextTurn();
                 }
-                else if (cpuChoice == 1)
+                else
                 {
                     isMoving = false;
                     isDice = true;
