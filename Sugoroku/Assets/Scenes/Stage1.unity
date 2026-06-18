@@ -6709,7 +6709,7 @@ MonoBehaviour:
   p_PointText3: {fileID: 138988615}
   Playernum: {fileID: 921442964}
   item_position: {x: 0, y: 0, z: 0}
-  oxygen: 50
+  oxygen: 40
   baseDecrement: 1
   energyCores: 0
   safety: 0

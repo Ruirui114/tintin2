@@ -328,6 +328,13 @@ public class GameManager : MonoBehaviour
                 p.Reset();
             }
         }
+        else
+        {
+            if (players[currentPlayer].hasGoal)
+            {
+                NextTurn();
+            }
+        }
     }
     // é_ëfêîui
     void UpdateOxygenUI()
