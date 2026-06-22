@@ -7,7 +7,6 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using System.Collections;
 
-
 public class GameManager : MonoBehaviour
 {
     public Dice dice;
