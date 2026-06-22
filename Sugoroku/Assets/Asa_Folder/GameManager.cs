@@ -49,6 +49,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        Debug.Log("開始 currentPlayer = " + currentPlayer);
 
         if (ChoicePanel != null)
             ChoicePanel.SetActive(false);
@@ -120,18 +121,17 @@ public class GameManager : MonoBehaviour
 
     void SkipGoalPlayers()
     {
-        //int goalCount = 0;
+        Debug.Log($"Scene = {SceneManager.GetActiveScene().name}");
 
-        //foreach (var p in players)
-        //{
-        //    if (p.hasGoal)
-        //    {
-        //        goalCount++;
-        //    }
-        //}
+        Debug.Log(
+            $"P1={players[0].hasGoal} " +
+            $"P2={players[1].hasGoal} " +
+            $"P3={players[2].hasGoal}"
+        );
+
 
         // 全員ゴール
-        
+
         if (players[0].hasGoal == true
             && players[1].hasGoal == true
             && players[2].hasGoal == true)
@@ -205,7 +205,7 @@ public class GameManager : MonoBehaviour
                 s_manager.Score();
                 s_manager.Reset();
                 Item_Index.Clear();
-                SceneManager.LoadScene("Resul1");
+                SceneManager.LoadScene("Result1");
             }
             else if (SceneManager.GetActiveScene().name == "Stage2")
             {
