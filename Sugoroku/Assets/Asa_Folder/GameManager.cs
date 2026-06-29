@@ -48,8 +48,8 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-    
 
+        currentPlayer = 0;
         Debug.Log("ŠJŽn currentPlayer = " + currentPlayer);
 
         if (ChoicePanel != null)
@@ -305,10 +305,37 @@ public class GameManager : MonoBehaviour
                     item_position = players[currentPlayer].item_position;
                     players[currentPlayer].Item();
 
+                    TileData tile =
+                     players[currentPlayer]
+                    .points[players[currentPlayer].currentIndex]
+                    .GetComponent<TileData>();
+
+                    if (tile != null && !tile.collected)
+                    {
+                        players[currentPlayer].point += tile.point;
+
+                        tile.collected = true;
+
+                        UpdatePointUI();
+                    }
+
                     if (i < Item_Pos.Length)
                     {
                         Item_Pos[i] = players[currentPlayer].item_position;
                         i++;
+                    }
+
+                    if (currentPlayer == 0)
+                    {
+                        p_ItemText1.text = "" + players[currentPlayer].item;
+                    }
+                    if (currentPlayer == 1)
+                    {
+                        p_ItemText2.text = "" + players[currentPlayer].item;
+                    }
+                    if (currentPlayer == 2)
+                    {
+                        p_ItemText3.text = "" + players[currentPlayer].item;
                     }
 
                     isDice = true;

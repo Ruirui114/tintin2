@@ -1911,7 +1911,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u5B9D\u306E\u6570"
+  m_Text: "\u30B9\u30B3\u30A2\u306E\u6570"
 --- !u!222 &460092635
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3958,6 +3958,7 @@ MonoBehaviour:
   - {fileID: 913885096}
   score: 
   comprehensivescore: 
+  CPU: 0
 --- !u!224 &965206442
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5378,7 +5379,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u30B9\u30B3\u30A2\u306E\u6570\n"
+  m_Text: "\u5B9D\u306E\u6570\n"
 --- !u!222 &1263355051
 CanvasRenderer:
   m_ObjectHideFlags: 0

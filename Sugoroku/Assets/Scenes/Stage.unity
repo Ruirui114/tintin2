@@ -3004,6 +3004,7 @@ MonoBehaviour:
   - {fileID: 1070674221}
   score: 
   comprehensivescore: 
+  CPU: 0
 --- !u!224 &644558075
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3185,7 +3186,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u30B9\u30B3\u30A2\u306E\u6570\n"
+  m_Text: "\u5B9D\u306E\u6570\n"
 --- !u!222 &686976285
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6900,7 +6901,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u5B9D\u306E\u6570"
+  m_Text: "\u30B9\u30B3\u30A2\u306E\u6570"
 --- !u!222 &1751262737
 CanvasRenderer:
   m_ObjectHideFlags: 0

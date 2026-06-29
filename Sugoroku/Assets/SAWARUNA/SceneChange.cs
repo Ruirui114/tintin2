@@ -18,6 +18,10 @@ public class SceneChange : MonoBehaviour
         StartCoroutine(ChangeSceneCoroutine());
     }
 
+    public void ChangeScene()
+    {
+        StartCoroutine(ChangeSceneCoroutine());
+    }
     IEnumerator ChangeSceneCoroutine()
     {
         SEManager se = FindFirstObjectByType<SEManager>();

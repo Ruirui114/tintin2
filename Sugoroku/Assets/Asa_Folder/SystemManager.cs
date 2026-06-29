@@ -30,7 +30,7 @@ public class SystemManager : MonoBehaviour
     {
         for (int i = 0; i < players.Length; i++)
         {
-            score[i] = players[i].point;
+            score[i] = players[i].point + players[i].oxygen;
             comprehensivescore[i] += players[i].point + players[i].oxygen;
         }
     }
