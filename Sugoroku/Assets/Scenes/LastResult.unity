@@ -464,7 +464,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e086cc1e094904d4eba7fa25859d3231, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Stage1
+  sceneName: Title
 --- !u!114 &220437531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1649,12 +1649,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   s_manager: {fileID: 1072033118}
-  player1_scoreText: {fileID: 0}
-  player2_scoreText: {fileID: 0}
-  player3_scoreText: {fileID: 0}
-  player1_comprehensivescoreText: {fileID: 0}
-  player2_comprehensivescoreText: {fileID: 0}
-  player3_comprehensivescoreText: {fileID: 0}
+  player1_scoreText: {fileID: 866178275}
+  player2_scoreText: {fileID: 69349982}
+  player3_scoreText: {fileID: 1819466263}
+  player1_comprehensivescoreText: {fileID: 423813432}
+  player2_comprehensivescoreText: {fileID: 2121989622}
+  player3_comprehensivescoreText: {fileID: 2015241157}
 --- !u!4 &1143028883
 Transform:
   m_ObjectHideFlags: 0
