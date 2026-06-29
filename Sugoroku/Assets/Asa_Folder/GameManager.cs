@@ -77,6 +77,7 @@ public class GameManager : MonoBehaviour
             players[1].isCPU = true;
             players[2].isCPU = true;
         }
+
         Playernum.text = "" + (currentPlayer + 1);
     
         PlayerMove current = players[currentPlayer];
