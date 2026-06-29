@@ -6,7 +6,8 @@ public class SystemManager : MonoBehaviour
     public PlayerMove[] players;
     public int []score;
     public int[] comprehensivescore;
-    public bool CPU = false;
+    public bool CPU1 = false;
+    public bool CPU2 = false;
     public static SystemManager Instance;
     void Awake()
     {

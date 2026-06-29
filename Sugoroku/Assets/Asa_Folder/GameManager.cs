@@ -72,7 +72,13 @@ public class GameManager : MonoBehaviour
     {
         if (isMoving || isChoosing) return;
 
-        if (s_manager.CPU == true)
+        if (s_manager.CPU1 == true)
+        {
+            players[1].isCPU = false;
+            players[2].isCPU = true;
+        }
+
+        if (s_manager.CPU2 == true)
         {
             players[1].isCPU = true;
             players[2].isCPU = true;

@@ -8,13 +8,22 @@ public class SceneChange : MonoBehaviour
 
     public void ChangeScenePlayer()
     {
-        SystemManager.Instance.CPU = false;
+        SystemManager.Instance.CPU1 = false;
+        SystemManager.Instance.CPU2 = false;
         StartCoroutine(ChangeSceneCoroutine());
     }
 
-    public void ChangeSceneCPU()
+    public void ChangeScene1CPU()
     {
-        SystemManager.Instance.CPU = true;
+        SystemManager.Instance.CPU1 = true;
+        SystemManager.Instance.CPU2 = false;
+        StartCoroutine(ChangeSceneCoroutine());
+    }
+
+    public void ChangeScene2CPU()
+    {
+        SystemManager.Instance.CPU2 = true;
+        SystemManager.Instance.CPU1 = false;
         StartCoroutine(ChangeSceneCoroutine());
     }
 

@@ -304,7 +304,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 557565440}
         m_TargetAssemblyTypeName: SceneChange, Assembly-CSharp
-        m_MethodName: ChangeScenePlayer
+        m_MethodName: ChangeScene2CPU
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -851,7 +851,8 @@ MonoBehaviour:
   players: []
   score: 
   comprehensivescore: 
-  CPU: 0
+  CPU1: 0
+  CPU2: 0
 --- !u!4 &1823617947
 Transform:
   m_ObjectHideFlags: 0
@@ -1111,7 +1112,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1997969081}
         m_TargetAssemblyTypeName: SceneChange, Assembly-CSharp
-        m_MethodName: ChangeScenePlayer
+        m_MethodName: ChangeScene1CPU
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
