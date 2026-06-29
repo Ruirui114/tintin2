@@ -142,6 +142,7 @@ public class GameManager : MonoBehaviour
                 s_manager.Score();
                 s_manager.Reset();
                 Item_Index.Clear();
+                currentPlayer = 0;
                 SceneManager.LoadScene("Result");
             }
             else if (SceneManager.GetActiveScene().name == "Stage1")
@@ -149,6 +150,7 @@ public class GameManager : MonoBehaviour
                 s_manager.Score();
                 s_manager.Reset();
                 Item_Index.Clear();
+                currentPlayer = 0;
                 SceneManager.LoadScene("Result1");
             }
             else if (SceneManager.GetActiveScene().name == "Stage2")
@@ -156,6 +158,7 @@ public class GameManager : MonoBehaviour
                 s_manager.Score();
                 s_manager.Reset();
                 Item_Index.Clear();
+                currentPlayer = 0;
                 SceneManager.LoadScene("LastResult");
             }
             return;
@@ -184,11 +187,13 @@ public class GameManager : MonoBehaviour
                     {
                         players[i].item = 0;
                         players[i].oxygen = 0;
+                        players[i].point = 0;
                     }
                 }
                 s_manager.Score();
                 s_manager.Reset();
                 Item_Index.Clear();
+                currentPlayer = 0;
                 SceneManager.LoadScene("Result");
             }
             else if (SceneManager.GetActiveScene().name == "Stage1")
@@ -199,11 +204,13 @@ public class GameManager : MonoBehaviour
                     {
                         players[i].item = 0;
                         players[i].oxygen = 0;
+                        players[i].point = 0;
                     }
                 }
                 s_manager.Score();
                 s_manager.Reset();
                 Item_Index.Clear();
+                currentPlayer = 0;
                 SceneManager.LoadScene("Result1");
             }
             else if (SceneManager.GetActiveScene().name == "Stage2")
@@ -214,11 +221,13 @@ public class GameManager : MonoBehaviour
                     {
                         players[i].item = 0;
                         players[i].oxygen = 0;
+                        players[i].point = 0;
                     }
                 }
                 s_manager.Score();
                 s_manager.Reset();
                 Item_Index.Clear();
+                currentPlayer = 0;
                 SceneManager.LoadScene("LastResult");
             }
 

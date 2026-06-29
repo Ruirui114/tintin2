@@ -107,6 +107,8 @@ public class PlayerMove : MonoBehaviour
         oxygen = 0;
         hasGoal = false;
         isMoving = false;
+        isReturning = false;
+        hasChosenDirection = true;
 
         transform.position = points[currentIndex].position;
     }
