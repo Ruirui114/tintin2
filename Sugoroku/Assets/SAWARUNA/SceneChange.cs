@@ -6,8 +6,15 @@ public class SceneChange : MonoBehaviour
 {
     public string sceneName;
 
-    public void ChangeScene()
+    public void ChangeScenePlayer()
     {
+        SystemManager.Instance.CPU = false;
+        StartCoroutine(ChangeSceneCoroutine());
+    }
+
+    public void ChangeSceneCPU()
+    {
+        SystemManager.Instance.CPU = true;
         StartCoroutine(ChangeSceneCoroutine());
     }
 

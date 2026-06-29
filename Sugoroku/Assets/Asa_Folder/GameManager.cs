@@ -48,6 +48,8 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+    
+
         Debug.Log("ŠJŽn currentPlayer = " + currentPlayer);
 
         if (ChoicePanel != null)
@@ -70,6 +72,11 @@ public class GameManager : MonoBehaviour
     {
         if (isMoving || isChoosing) return;
 
+        if (s_manager.CPU == true)
+        {
+            players[1].isCPU = true;
+            players[2].isCPU = true;
+        }
         Playernum.text = "" + (currentPlayer + 1);
     
         PlayerMove current = players[currentPlayer];
