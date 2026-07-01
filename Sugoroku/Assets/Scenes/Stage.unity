@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 17988810}
   - component: {fileID: 17988809}
   - component: {fileID: 17988811}
+  - component: {fileID: 17988812}
   m_Layer: 0
   m_Name: Yellow_Point27
   m_TagString: Untagged
@@ -221,6 +222,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   point: 50
   collected: 0
+--- !u!114 &17988812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17988808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e044015ff96dd8488421d56eea70d6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &39219375
 GameObject:
   m_ObjectHideFlags: 0
@@ -311,6 +324,7 @@ GameObject:
   - component: {fileID: 55067313}
   - component: {fileID: 55067312}
   - component: {fileID: 55067314}
+  - component: {fileID: 55067315}
   m_Layer: 0
   m_Name: Yellow_Point28
   m_TagString: Untagged
@@ -402,6 +416,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   point: 50
   collected: 0
+--- !u!114 &55067315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55067311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e044015ff96dd8488421d56eea70d6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &104236393
 GameObject:
   m_ObjectHideFlags: 0
@@ -571,6 +597,7 @@ GameObject:
   - component: {fileID: 110721865}
   - component: {fileID: 110721864}
   - component: {fileID: 110721866}
+  - component: {fileID: 110721867}
   m_Layer: 0
   m_Name: Green_Point9
   m_TagString: Untagged
@@ -662,6 +689,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   point: 20
   collected: 0
+--- !u!114 &110721867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 110721863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e044015ff96dd8488421d56eea70d6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &158472108
 GameObject:
   m_ObjectHideFlags: 0
@@ -673,6 +712,7 @@ GameObject:
   - component: {fileID: 158472110}
   - component: {fileID: 158472109}
   - component: {fileID: 158472111}
+  - component: {fileID: 158472112}
   m_Layer: 0
   m_Name: Yellow_Point21
   m_TagString: Untagged
@@ -764,6 +804,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   point: 50
   collected: 0
+--- !u!114 &158472112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 158472108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e044015ff96dd8488421d56eea70d6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &160225977
 GameObject:
   m_ObjectHideFlags: 0
@@ -775,6 +827,7 @@ GameObject:
   - component: {fileID: 160225979}
   - component: {fileID: 160225978}
   - component: {fileID: 160225980}
+  - component: {fileID: 160225981}
   m_Layer: 0
   m_Name: Green_Point8
   m_TagString: Untagged
@@ -866,6 +919,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   point: 20
   collected: 0
+--- !u!114 &160225981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160225977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e044015ff96dd8488421d56eea70d6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &166226920
 GameObject:
   m_ObjectHideFlags: 0
@@ -1013,6 +1078,7 @@ GameObject:
   - component: {fileID: 177803771}
   - component: {fileID: 177803770}
   - component: {fileID: 177803772}
+  - component: {fileID: 177803773}
   m_Layer: 0
   m_Name: Red_Point18
   m_TagString: Untagged
@@ -1104,6 +1170,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   point: 30
   collected: 0
+--- !u!114 &177803773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177803769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e044015ff96dd8488421d56eea70d6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &222485238
 GameObject:
   m_ObjectHideFlags: 0
@@ -1360,6 +1438,7 @@ GameObject:
   - component: {fileID: 272423047}
   - component: {fileID: 272423046}
   - component: {fileID: 272423048}
+  - component: {fileID: 272423049}
   m_Layer: 0
   m_Name: Green_Point7
   m_TagString: Untagged
@@ -1451,6 +1530,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   point: 20
   collected: 0
+--- !u!114 &272423049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 272423045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e044015ff96dd8488421d56eea70d6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &301645037
 GameObject:
   m_ObjectHideFlags: 0
@@ -1636,6 +1727,7 @@ GameObject:
   - component: {fileID: 323987571}
   - component: {fileID: 323987570}
   - component: {fileID: 323987572}
+  - component: {fileID: 323987573}
   m_Layer: 0
   m_Name: Red_Point17
   m_TagString: Untagged
@@ -1727,6 +1819,92 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   point: 30
   collected: 0
+--- !u!114 &323987573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 323987569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e044015ff96dd8488421d56eea70d6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &383915544
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 383915546}
+  - component: {fileID: 383915545}
+  m_Layer: 0
+  m_Name: TileManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &383915545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383915544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f77ae30195e386040b1fbc6fd184e808, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tiles:
+  - {fileID: 1620614490}
+  - {fileID: 523076160}
+  - {fileID: 584440265}
+  - {fileID: 577281174}
+  - {fileID: 1424395901}
+  - {fileID: 995148478}
+  - {fileID: 1985924215}
+  - {fileID: 272423048}
+  - {fileID: 160225980}
+  - {fileID: 110721866}
+  - {fileID: 1603740279}
+  - {fileID: 2042364602}
+  - {fileID: 1002871689}
+  - {fileID: 889038151}
+  - {fileID: 1520403017}
+  - {fileID: 407592562}
+  - {fileID: 991331412}
+  - {fileID: 323987572}
+  - {fileID: 177803772}
+  - {fileID: 757189618}
+  - {fileID: 1133342617}
+  - {fileID: 158472111}
+  - {fileID: 1629016309}
+  - {fileID: 1144344313}
+  - {fileID: 1448320203}
+  - {fileID: 399505831}
+  - {fileID: 1115487903}
+  - {fileID: 17988811}
+  - {fileID: 55067314}
+--- !u!4 &383915546
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383915544}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.13768, y: 0.16058, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &399505828
 GameObject:
   m_ObjectHideFlags: 0
@@ -1738,6 +1916,7 @@ GameObject:
   - component: {fileID: 399505830}
   - component: {fileID: 399505829}
   - component: {fileID: 399505831}
+  - component: {fileID: 399505832}
   m_Layer: 0
   m_Name: Yellow_Point25
   m_TagString: Untagged
@@ -1829,6 +2008,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   point: 50
   collected: 0
+--- !u!114 &399505832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 399505828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e044015ff96dd8488421d56eea70d6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &407592559
 GameObject:
   m_ObjectHideFlags: 0
@@ -1840,6 +2031,7 @@ GameObject:
   - component: {fileID: 407592561}
   - component: {fileID: 407592560}
   - component: {fileID: 407592562}
+  - component: {fileID: 407592563}
   m_Layer: 0
   m_Name: Red_Point15
   m_TagString: Untagged
@@ -1931,6 +2123,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   point: 30
   collected: 0
+--- !u!114 &407592563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 407592559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e044015ff96dd8488421d56eea70d6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &412703856
 GameObject:
   m_ObjectHideFlags: 0
@@ -2508,6 +2712,7 @@ GameObject:
   - component: {fileID: 523076159}
   - component: {fileID: 523076158}
   - component: {fileID: 523076160}
+  - component: {fileID: 523076161}
   m_Layer: 0
   m_Name: Bule_Point1
   m_TagString: Untagged
@@ -2599,6 +2804,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   point: 10
   collected: 0
+--- !u!114 &523076161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 523076157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e044015ff96dd8488421d56eea70d6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &574136286
 GameObject:
   m_ObjectHideFlags: 0
@@ -2689,6 +2906,7 @@ GameObject:
   - component: {fileID: 577281173}
   - component: {fileID: 577281172}
   - component: {fileID: 577281174}
+  - component: {fileID: 577281175}
   m_Layer: 0
   m_Name: Bule_Point3
   m_TagString: Untagged
@@ -2780,6 +2998,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   point: 10
   collected: 0
+--- !u!114 &577281175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577281171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e044015ff96dd8488421d56eea70d6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &584440262
 GameObject:
   m_ObjectHideFlags: 0
@@ -2791,6 +3021,7 @@ GameObject:
   - component: {fileID: 584440264}
   - component: {fileID: 584440263}
   - component: {fileID: 584440265}
+  - component: {fileID: 584440266}
   m_Layer: 0
   m_Name: Bule_Point2
   m_TagString: Untagged
@@ -2882,6 +3113,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   point: 10
   collected: 0
+--- !u!114 &584440266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584440262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e044015ff96dd8488421d56eea70d6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &596681876
 GameObject:
   m_ObjectHideFlags: 0
@@ -3271,8 +3514,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1.2485046, y: 0.539093}
-  m_SizeDelta: {x: 55.79, y: 39.64}
+  m_AnchoredPosition: {x: -0.00012207031, y: -0.00091552734}
+  m_SizeDelta: {x: 141.18, y: 166.36}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &757189615
 GameObject:
@@ -3285,6 +3528,7 @@ GameObject:
   - component: {fileID: 757189617}
   - component: {fileID: 757189616}
   - component: {fileID: 757189618}
+  - component: {fileID: 757189619}
   m_Layer: 0
   m_Name: Red_Point19
   m_TagString: Untagged
@@ -3376,6 +3620,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   point: 30
   collected: 0
+--- !u!114 &757189619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 757189615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e044015ff96dd8488421d56eea70d6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &782184039
 GameObject:
   m_ObjectHideFlags: 0
@@ -3766,6 +4022,7 @@ GameObject:
   - component: {fileID: 889038150}
   - component: {fileID: 889038149}
   - component: {fileID: 889038151}
+  - component: {fileID: 889038152}
   m_Layer: 0
   m_Name: Green_Point13
   m_TagString: Untagged
@@ -3857,6 +4114,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   point: 20
   collected: 0
+--- !u!114 &889038152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889038148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e044015ff96dd8488421d56eea70d6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &960224916
 GameObject:
   m_ObjectHideFlags: 0
@@ -4182,6 +4451,7 @@ GameObject:
   - component: {fileID: 991331411}
   - component: {fileID: 991331410}
   - component: {fileID: 991331412}
+  - component: {fileID: 991331413}
   m_Layer: 0
   m_Name: Red_Point16
   m_TagString: Untagged
@@ -4273,6 +4543,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   point: 30
   collected: 0
+--- !u!114 &991331413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 991331409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e044015ff96dd8488421d56eea70d6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &995148475
 GameObject:
   m_ObjectHideFlags: 0
@@ -4284,6 +4566,7 @@ GameObject:
   - component: {fileID: 995148477}
   - component: {fileID: 995148476}
   - component: {fileID: 995148478}
+  - component: {fileID: 995148479}
   m_Layer: 0
   m_Name: Bule_Point5
   m_TagString: Untagged
@@ -4375,6 +4658,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   point: 10
   collected: 0
+--- !u!114 &995148479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 995148475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e044015ff96dd8488421d56eea70d6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1002871686
 GameObject:
   m_ObjectHideFlags: 0
@@ -4386,6 +4681,7 @@ GameObject:
   - component: {fileID: 1002871688}
   - component: {fileID: 1002871687}
   - component: {fileID: 1002871689}
+  - component: {fileID: 1002871690}
   m_Layer: 0
   m_Name: Green_Point12
   m_TagString: Untagged
@@ -4477,6 +4773,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   point: 20
   collected: 0
+--- !u!114 &1002871690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1002871686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e044015ff96dd8488421d56eea70d6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1070674214 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7322479139939081348, guid: a23feaf1d7a3acb449af59db52c27e97, type: 3}
@@ -4630,6 +4938,7 @@ GameObject:
   - component: {fileID: 1115487902}
   - component: {fileID: 1115487901}
   - component: {fileID: 1115487903}
+  - component: {fileID: 1115487904}
   m_Layer: 0
   m_Name: Yellow_Point26
   m_TagString: Untagged
@@ -4721,6 +5030,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   point: 50
   collected: 0
+--- !u!114 &1115487904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115487900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e044015ff96dd8488421d56eea70d6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1133342614
 GameObject:
   m_ObjectHideFlags: 0
@@ -4732,6 +5053,7 @@ GameObject:
   - component: {fileID: 1133342616}
   - component: {fileID: 1133342615}
   - component: {fileID: 1133342617}
+  - component: {fileID: 1133342618}
   m_Layer: 0
   m_Name: Red_Point20
   m_TagString: Untagged
@@ -4823,6 +5145,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   point: 30
   collected: 0
+--- !u!114 &1133342618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1133342614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e044015ff96dd8488421d56eea70d6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1144344310
 GameObject:
   m_ObjectHideFlags: 0
@@ -4834,6 +5168,7 @@ GameObject:
   - component: {fileID: 1144344312}
   - component: {fileID: 1144344311}
   - component: {fileID: 1144344313}
+  - component: {fileID: 1144344314}
   m_Layer: 0
   m_Name: Yellow_Point23
   m_TagString: Untagged
@@ -4925,6 +5260,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   point: 50
   collected: 0
+--- !u!114 &1144344314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1144344310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e044015ff96dd8488421d56eea70d6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1176165430 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7322479139939081348, guid: a23feaf1d7a3acb449af59db52c27e97, type: 3}
@@ -5200,6 +5547,7 @@ MonoBehaviour:
   - {fileID: 1859893173}
   - {fileID: 1176165431}
   - {fileID: 1070674221}
+  tileManager: {fileID: 383915545}
   ChoicePanel: {fileID: 711795969}
   ItemPanel: {fileID: 1253691636}
   oxygenText: {fileID: 1453853306}
@@ -5272,8 +5620,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1.2485046, y: 0.539093}
-  m_SizeDelta: {x: 55.79, y: 39.64}
+  m_AnchoredPosition: {x: -0.0008544922, y: -0.00091552734}
+  m_SizeDelta: {x: 141.17, y: 166.36}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1253691638
 MonoBehaviour:
@@ -5790,6 +6138,7 @@ GameObject:
   - component: {fileID: 1424395900}
   - component: {fileID: 1424395899}
   - component: {fileID: 1424395901}
+  - component: {fileID: 1424395902}
   m_Layer: 0
   m_Name: Bule_Point4
   m_TagString: Untagged
@@ -5881,6 +6230,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   point: 10
   collected: 0
+--- !u!114 &1424395902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1424395898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e044015ff96dd8488421d56eea70d6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1448320200
 GameObject:
   m_ObjectHideFlags: 0
@@ -5892,6 +6253,7 @@ GameObject:
   - component: {fileID: 1448320202}
   - component: {fileID: 1448320201}
   - component: {fileID: 1448320203}
+  - component: {fileID: 1448320204}
   m_Layer: 0
   m_Name: Yellow_Point24
   m_TagString: Untagged
@@ -5983,6 +6345,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   point: 50
   collected: 0
+--- !u!114 &1448320204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1448320200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e044015ff96dd8488421d56eea70d6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1451096239
 GameObject:
   m_ObjectHideFlags: 0
@@ -6269,6 +6643,7 @@ GameObject:
   - component: {fileID: 1520403016}
   - component: {fileID: 1520403015}
   - component: {fileID: 1520403017}
+  - component: {fileID: 1520403018}
   m_Layer: 0
   m_Name: Red_Point14
   m_TagString: Untagged
@@ -6360,6 +6735,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   point: 30
   collected: 0
+--- !u!114 &1520403018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520403014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e044015ff96dd8488421d56eea70d6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1558938703
 GameObject:
   m_ObjectHideFlags: 0
@@ -6458,6 +6845,7 @@ GameObject:
   - component: {fileID: 1603740278}
   - component: {fileID: 1603740277}
   - component: {fileID: 1603740279}
+  - component: {fileID: 1603740280}
   m_Layer: 0
   m_Name: Green_Point10
   m_TagString: Untagged
@@ -6549,6 +6937,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   point: 20
   collected: 0
+--- !u!114 &1603740280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603740276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e044015ff96dd8488421d56eea70d6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1604572087
 GameObject:
   m_ObjectHideFlags: 0
@@ -6639,6 +7039,7 @@ GameObject:
   - component: {fileID: 1620614489}
   - component: {fileID: 1620614488}
   - component: {fileID: 1620614490}
+  - component: {fileID: 1620614491}
   m_Layer: 0
   m_Name: Bule_Point0
   m_TagString: Untagged
@@ -6730,6 +7131,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   point: 10
   collected: 0
+--- !u!114 &1620614491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620614487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e044015ff96dd8488421d56eea70d6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1629016306
 GameObject:
   m_ObjectHideFlags: 0
@@ -6741,6 +7154,7 @@ GameObject:
   - component: {fileID: 1629016308}
   - component: {fileID: 1629016307}
   - component: {fileID: 1629016309}
+  - component: {fileID: 1629016310}
   m_Layer: 0
   m_Name: Yellow_Point22
   m_TagString: Untagged
@@ -6832,6 +7246,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   point: 50
   collected: 0
+--- !u!114 &1629016310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1629016306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e044015ff96dd8488421d56eea70d6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1751262734
 GameObject:
   m_ObjectHideFlags: 0
@@ -7482,6 +7908,7 @@ GameObject:
   - component: {fileID: 1985924214}
   - component: {fileID: 1985924213}
   - component: {fileID: 1985924215}
+  - component: {fileID: 1985924216}
   m_Layer: 0
   m_Name: Bule_Point6
   m_TagString: Untagged
@@ -7573,6 +8000,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   point: 10
   collected: 0
+--- !u!114 &1985924216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1985924212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e044015ff96dd8488421d56eea70d6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2042364599
 GameObject:
   m_ObjectHideFlags: 0
@@ -7584,6 +8023,7 @@ GameObject:
   - component: {fileID: 2042364601}
   - component: {fileID: 2042364600}
   - component: {fileID: 2042364602}
+  - component: {fileID: 2042364603}
   m_Layer: 0
   m_Name: Green_Point11
   m_TagString: Untagged
@@ -7675,6 +8115,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   point: 20
   collected: 0
+--- !u!114 &2042364603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042364599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e044015ff96dd8488421d56eea70d6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2088414554
 GameObject:
   m_ObjectHideFlags: 0
@@ -7907,3 +8359,4 @@ SceneRoots:
   - {fileID: 1558938705}
   - {fileID: 1221808354}
   - {fileID: 961245403}
+  - {fileID: 383915546}

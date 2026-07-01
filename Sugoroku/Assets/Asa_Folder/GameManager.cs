@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public PlayerMove[] players;
     SystemManager s_manager;
     public static GameManager Instance; // どこからでも参照可能
+    public TileManager tileManager;
     public GameObject ChoicePanel; // ポイント取得ボタン
     public GameObject ItemPanel;
 
@@ -273,9 +274,9 @@ public class GameManager : MonoBehaviour
             players[currentPlayer].oxygen = oxygen;
         }
 
-        ConsumeOxygen();
-
         SkipGoalPlayers();
+
+        ConsumeOxygen();
 
         index = players[currentPlayer].currentIndex;
 
@@ -290,7 +291,6 @@ public class GameManager : MonoBehaviour
         {
             isMoving = false;
             isDice = true;
-            //Debug.Log("もうとったよ");
             StartCoroutine(ShowMessage("もうとったよ"));
             NextTurn();
         }
@@ -301,6 +301,7 @@ public class GameManager : MonoBehaviour
                 isMoving = false;
                 ItemPanel.SetActive(true);
             }
+            //このプレイヤーがCPUなら
             else
             {
                 isMoving = false;
@@ -363,10 +364,11 @@ public class GameManager : MonoBehaviour
     void NextTurn()
     {
         currentPlayer++;
-
+        //このプレイヤーが最後だったら最初のプレイヤーの戻す
         if (currentPlayer >= players.Length)
         {
             currentPlayer = 0;
+            //次のプレイヤーがゴール済みならその次のプレイヤーのターンにする
             if (players[currentPlayer].hasGoal)
             {
                 NextTurn();
@@ -379,13 +381,14 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+            //次のプレイヤーがゴール済みならその次のプレイヤーのターンにする
             if (players[currentPlayer].hasGoal)
             {
                 NextTurn();
             }
         }
     }
-    // 酸素数ui
+    // 酸素数UI
     void UpdateOxygenUI()
     {
         oxygenText.text = "" + oxygen;
@@ -456,12 +459,12 @@ public class GameManager : MonoBehaviour
         players[currentPlayer].Item();
 
         Item_Index.Add(index);
-
+        //アイテムを拾ったマスをみる(マスごとにポイントが変わる)
         TileData tile =
         players[currentPlayer]
         .points[players[currentPlayer].currentIndex]
         .GetComponent<TileData>();
-
+        //プレイヤーのポイントを増やす
         if (tile != null && !tile.collected)
         {
             players[currentPlayer].point += tile.point;
@@ -470,13 +473,13 @@ public class GameManager : MonoBehaviour
 
             UpdatePointUI();
         }
-
+        //プレイヤーのアイテムを増やす
         if (i < Item_Pos.Length)
         {
             Item_Pos[i] = players[currentPlayer].item_position;
             i++;
         }
-
+        //UIテキストの更新
         if (currentPlayer == 0)
         {
             p_ItemText1.text = "" + players[currentPlayer].item;
@@ -489,7 +492,8 @@ public class GameManager : MonoBehaviour
         {
             p_ItemText3.text = "" + players[currentPlayer].item;
         }
-
+        //マスの色が変わる
+        tileManager.ChangeTileColor((players[currentPlayer].currentIndex - 5), Color.gray);
         ItemPanel.SetActive(false);
         isDice = true;
 
