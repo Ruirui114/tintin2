@@ -6,6 +6,7 @@ public class BGMManager : MonoBehaviour
     public AudioClip titleBGM;
     public AudioClip stageBGM;
     public AudioClip resultBGM;
+    public AudioClip lastResultBGM;
 
     private AudioSource audioSource;
 
@@ -42,8 +43,11 @@ public class BGMManager : MonoBehaviour
 
             case "Result":
             case "Result1":
-            case "LastResult":
                 clip = resultBGM;
+                break;
+
+            case "LastResult":
+                clip = lastResultBGM;
                 break;
         }
 

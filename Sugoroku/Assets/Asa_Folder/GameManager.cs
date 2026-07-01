@@ -435,6 +435,13 @@ public class GameManager : MonoBehaviour
     // 引き返しボタン
     public void OnClickChoice1()
     {
+        SEManager se = FindFirstObjectByType<SEManager>();
+
+        if (se != null)
+        {
+            se.PlayClick();
+        }
+
         players[currentPlayer].StartReturn();
 
         ChoicePanel.SetActive(false);
@@ -445,6 +452,13 @@ public class GameManager : MonoBehaviour
     // 何もしないボタン
     public void OnClickChoice2()
     {
+        SEManager se = FindFirstObjectByType<SEManager>();
+
+        if (se != null)
+        {
+            se.PlayClick();
+        }
+
         players[currentPlayer].ContinueForward();
 
         ChoicePanel.SetActive(false);
@@ -455,6 +469,13 @@ public class GameManager : MonoBehaviour
     // アイテムボタン
     public void OnClikItem1()
     {
+        SEManager se = FindFirstObjectByType<SEManager>();
+
+        if (se != null)
+        {
+            se.PlayClick();
+        }
+
         item_position = players[currentPlayer].item_position;
         players[currentPlayer].Item();
 
@@ -503,6 +524,13 @@ public class GameManager : MonoBehaviour
     // 何もしないボタン
     public void OnClickItem2()
     {
+        SEManager se = FindFirstObjectByType<SEManager>();
+
+        if (se != null)
+        {
+            se.PlayClick();
+        }
+
         ItemPanel.SetActive(false);
         isDice = true;
 

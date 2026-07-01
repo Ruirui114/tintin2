@@ -27,6 +27,12 @@ public class Dice : MonoBehaviour
     {
         rolling = true;
 
+        SEManager se = FindFirstObjectByType<SEManager>();
+        if (se != null)
+        {
+            se.PlayDiceLoop();
+        }
+
         // 最初に結果を決める
         int current = GameManager.currentPlayer;
        
@@ -51,8 +57,11 @@ public class Dice : MonoBehaviour
         int diceValue = result + 1;
         diceValue = GameManager.Instance.Dice2(diceValue);
 
-        //if (diceValue < 0)
-        //    diceValue = 0;
+        // ループSE停止
+        if (se != null)
+        {
+            se.StopDiceLoop();
+        }
 
         // イベント発火
         OnDiceRolled?.Invoke(diceValue);

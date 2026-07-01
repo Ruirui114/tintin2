@@ -61,6 +61,14 @@ public class PlayerMove : MonoBehaviour
             // XV
             currentIndex = nextIndex;
 
+            Debug.Log("‘«‰¹F" + currentIndex);
+            // ‘«‰¹SE
+            SEManager se = FindFirstObjectByType<SEManager>();
+            if (se != null)
+            {
+                se.PlayFootStep();
+            }
+
             Vector3 target = points[currentIndex].position;
 
             // ˆÚ“®

@@ -3,8 +3,11 @@ using UnityEngine;
 public class SEManager : MonoBehaviour
 {
     public AudioClip clickSE;
+    public AudioClip diceSE;
 
-    private AudioSource audioSource;
+    public AudioSource seSource;    // クリック音用
+    public AudioSource diceSource;  // サイコロ用
+    public AudioClip footStepSE;    // 移動音
 
     void Awake()
     {
@@ -17,16 +20,31 @@ public class SEManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    void Start()
-    {
-        audioSource = GetComponent<AudioSource>();
-    }
-
     public void PlayClick()
     {
-        Debug.Log("クリック音再生");
-        Debug.Log(gameObject.name);
+        seSource.PlayOneShot(clickSE);
+    }
 
-        audioSource.PlayOneShot(clickSE);
+    // サイコロを振り始める
+    public void PlayDiceLoop()
+    {
+        if (!diceSource.isPlaying)
+        {
+            diceSource.clip = diceSE;
+            diceSource.loop = true;
+            diceSource.Play();
+        }
+    }
+
+    // サイコロが止まる
+    public void StopDiceLoop()
+    {
+        diceSource.Stop();
+        diceSource.loop = false;
+        diceSource.clip = null;
+    }
+    public void PlayFootStep()
+    {
+        seSource.PlayOneShot(footStepSE);
     }
 }
