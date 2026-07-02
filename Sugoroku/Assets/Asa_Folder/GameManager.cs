@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     public TileManager tileManager;
     public GameObject ChoicePanel; // ポイント取得ボタン
     public GameObject ItemPanel;
-
+    public GameObject DropPanel;
     public TextMeshProUGUI oxygenText; // 酸素数UI
     public Text messageText;
     public Text p_ItemText1;
@@ -58,6 +58,9 @@ public class GameManager : MonoBehaviour
 
         if (ItemPanel != null)
             ItemPanel.SetActive(false);
+
+        if (DropPanel != null)
+            DropPanel.SetActive(false);
 
         if (dice != null)
             dice.OnDiceRolled += OnDiceRolled;
@@ -290,9 +293,60 @@ public class GameManager : MonoBehaviour
         else if (Item_Index.Contains(index))
         {
             isMoving = false;
-            isDice = true;
-            StartCoroutine(ShowMessage("もうとったよ"));
-            NextTurn();
+            StartCoroutine(ShowMessage("もうアイテムないよ"));
+
+            if (players[currentPlayer].item >= 1 && players[currentPlayer].isCPU == false)
+            {
+                DropPanel.SetActive(true);
+            }
+            else if (players[currentPlayer].item >= 1 && players[currentPlayer].isCPU == true)
+            {
+                int cpuChoice = Random.Range(0, 2);
+
+                if (cpuChoice == 0)
+                {
+                    TileData tile =
+                    players[currentPlayer]
+                    .points[players[currentPlayer].currentIndex]
+                    .GetComponent<TileData>();
+
+                    for (int t = 0; t < Item_Pos.Length; t++)
+                    {
+                        if (Item_Pos[t] == players[currentPlayer].item_position)
+                        {
+                            Item_Pos[t] = Vector3.zero;
+                        }
+                    }
+
+                    players[currentPlayer].point -= 30;
+                    if (players[currentPlayer].point < 0)
+                    {
+                        players[currentPlayer].point = 0;
+                    }
+
+                    Item_Index.Remove(players[currentPlayer].currentIndex);
+                    players[currentPlayer].ItemDown();
+                    tileManager.ChangeTileColor((players[currentPlayer].currentIndex - 5), Color.white);
+
+
+                    UpdateUI();
+
+                    DropPanel.SetActive(false);
+                    isDice = true;
+
+                    NextTurn();
+                }
+                else
+                {
+                    isDice = true;
+                    NextTurn();
+                }
+            }
+            else
+            {
+                isDice = true;
+                NextTurn();
+            }
         }
         else
         {
@@ -310,7 +364,7 @@ public class GameManager : MonoBehaviour
                 if (cpuChoice == 0 && index > 4)
                 {
                     item_position = players[currentPlayer].item_position;
-                    players[currentPlayer].Item();
+                    players[currentPlayer].ItemUp();
 
                     TileData tile =
                      players[currentPlayer]
@@ -323,7 +377,7 @@ public class GameManager : MonoBehaviour
 
                         tile.collected = true;
 
-                        UpdatePointUI();
+                        UpdateUI();
                     }
 
                     if (i < Item_Pos.Length)
@@ -332,19 +386,7 @@ public class GameManager : MonoBehaviour
                         i++;
                     }
 
-                    if (currentPlayer == 0)
-                    {
-                        p_ItemText1.text = "" + players[currentPlayer].item;
-                    }
-                    if (currentPlayer == 1)
-                    {
-                        p_ItemText2.text = "" + players[currentPlayer].item;
-                    }
-                    if (currentPlayer == 2)
-                    {
-                        p_ItemText3.text = "" + players[currentPlayer].item;
-                    }
-
+                    tileManager.ChangeTileColor((players[currentPlayer].currentIndex - 5), Color.gray);
                     isDice = true;
 
                     NextTurn();
@@ -372,6 +414,7 @@ public class GameManager : MonoBehaviour
             if (players[currentPlayer].hasGoal)
             {
                 NextTurn();
+                return;
             }
 
             foreach (var p in players)
@@ -385,6 +428,7 @@ public class GameManager : MonoBehaviour
             if (players[currentPlayer].hasGoal)
             {
                 NextTurn();
+                return;
             }
         }
     }
@@ -477,7 +521,7 @@ public class GameManager : MonoBehaviour
         }
 
         item_position = players[currentPlayer].item_position;
-        players[currentPlayer].Item();
+        players[currentPlayer].ItemUp();
 
         Item_Index.Add(index);
         //アイテムを拾ったマスをみる(マスごとにポイントが変わる)
@@ -492,26 +536,13 @@ public class GameManager : MonoBehaviour
 
             tile.collected = true;
 
-            UpdatePointUI();
+            UpdateUI();
         }
         //プレイヤーのアイテムを増やす
         if (i < Item_Pos.Length)
         {
             Item_Pos[i] = players[currentPlayer].item_position;
             i++;
-        }
-        //UIテキストの更新
-        if (currentPlayer == 0)
-        {
-            p_ItemText1.text = "" + players[currentPlayer].item;
-        }
-        if (currentPlayer == 1)
-        {
-            p_ItemText2.text = "" + players[currentPlayer].item;
-        }
-        if (currentPlayer == 2)
-        {
-            p_ItemText3.text = "" + players[currentPlayer].item;
         }
         //マスの色が変わる
         tileManager.ChangeTileColor((players[currentPlayer].currentIndex - 5), Color.gray);
@@ -536,6 +567,61 @@ public class GameManager : MonoBehaviour
 
         NextTurn();
     }
+    public void OnClickDrop1()
+    {
+        SEManager se = FindFirstObjectByType<SEManager>();
+
+        if (se != null)
+        {
+            se.PlayClick();
+        }
+
+        TileData tile =
+        players[currentPlayer]
+        .points[players[currentPlayer].currentIndex]
+        .GetComponent<TileData>();
+
+        for (int t = 0; t < Item_Pos.Length; t++)
+        {
+            if (Item_Pos[t] == players[currentPlayer].item_position)
+            {
+                Item_Pos[t] = Vector3.zero;
+            }
+        }
+
+        players[currentPlayer].item -= 1;
+        players[currentPlayer].point -= 30;
+        if (players[currentPlayer].point < 0)
+        {
+            players[currentPlayer].point = 0;
+        }
+
+        Item_Index.Remove(players[currentPlayer].currentIndex);
+        players[currentPlayer].ItemDown();
+        tileManager.ChangeTileColor((players[currentPlayer].currentIndex - 5), Color.white);
+
+
+        UpdateUI();
+
+        DropPanel.SetActive(false);
+        isDice = true;
+
+        NextTurn();
+    }
+    public void OnClickDrop2()
+    {
+        SEManager se = FindFirstObjectByType<SEManager>();
+
+        if (se != null)
+        {
+            se.PlayClick();
+        }
+
+        DropPanel.SetActive(false);
+        isDice = true;
+
+        NextTurn();
+    }
     IEnumerator ShowMessage(string msg)
     {
         messageText.text = msg;
@@ -544,10 +630,13 @@ public class GameManager : MonoBehaviour
 
         messageText.text = "";
     }
-    public void UpdatePointUI()
+    public void UpdateUI()
     {
         p_PointText1.text = "" + players[0].point;
         p_PointText2.text = "" + players[1].point;
         p_PointText3.text = "" + players[2].point;
+        p_ItemText1.text = "" + players[0].item;
+        p_ItemText2.text = "" + players[1].item;
+        p_ItemText3.text = "" + players[2].item;
     }
 }

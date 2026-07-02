@@ -89,9 +89,13 @@ public class PlayerMove : MonoBehaviour
         isMoving = false;
     }
 
-    public void Item()
+    public void ItemUp()
     {
         item++;
+    }
+    public void ItemDown()
+    {
+        item--;
     }
 
     // Œ»İ‚Ìƒ}ƒX”Ô†‚ğ•Ô‚·
