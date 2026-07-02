@@ -589,7 +589,6 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        players[currentPlayer].item -= 1;
         players[currentPlayer].point -= 30;
         if (players[currentPlayer].point < 0)
         {
