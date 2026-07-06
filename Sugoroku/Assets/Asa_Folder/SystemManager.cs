@@ -45,6 +45,15 @@ public class SystemManager : MonoBehaviour
     }
     public void GameReset()
     {
-        
+        CPU1 = false;
+        CPU2 = false;
+
+        for (int i = 0; i < score.Length; i++)
+        {
+            score[i] = 0;
+            comprehensivescore[i] = 0;
+        }
+
+        players = null;
     }
 }

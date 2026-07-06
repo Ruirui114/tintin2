@@ -29,6 +29,11 @@ public class SceneChange : MonoBehaviour
 
     public void ChangeScene()
     {
+        if (sceneName == "Title")
+        {
+            SystemManager.Instance.GameReset();
+        }
+
         StartCoroutine(ChangeSceneCoroutine());
     }
     IEnumerator ChangeSceneCoroutine()
