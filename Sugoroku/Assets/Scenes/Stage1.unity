@@ -7841,7 +7841,10 @@ MonoBehaviour:
   p_PointText2: {fileID: 334722724}
   p_PointText3: {fileID: 138988615}
   Playernum: {fileID: 921442964}
-  playerColors: []
+  playerColors:
+  - {r: 1, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0.035513878, b: 1, a: 0}
+  - {r: 0.88600254, g: 0, b: 1, a: 0}
   item_position: {x: 0, y: 0, z: 0}
   oxygen: 60
   baseDecrement: 1
