@@ -274,8 +274,11 @@ public class GameManager : MonoBehaviour
         if (players[currentPlayer].currentIndex <= 4 && players[currentPlayer].isReturning)
         {
             Debug.Log($"プレイヤー: {currentPlayer}, ゴール");
+
             players[currentPlayer].hasGoal = true;
             players[currentPlayer].oxygen = oxygen;
+
+            StartCoroutine(ShowMessage($"プレイヤー{currentPlayer + 1} 帰還完了！"));
         }
 
         SkipGoalPlayers();
