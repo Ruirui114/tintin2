@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
     public Text p_PointText3;
 
     public Text Playernum;
+    public Color[] playerColors;
 
     public Vector3 item_position;
     public int oxygen = 0; // Ž_‘f 50
