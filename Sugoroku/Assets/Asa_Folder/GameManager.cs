@@ -410,30 +410,26 @@ public class GameManager : MonoBehaviour
     void NextTurn()
     {
         currentPlayer++;
-        //このプレイヤーが最後だったら最初のプレイヤーの戻す
+
         if (currentPlayer >= players.Length)
         {
             currentPlayer = 0;
-            //次のプレイヤーがゴール済みならその次のプレイヤーのターンにする
-            if (players[currentPlayer].hasGoal)
-            {
-                NextTurn();
-                return;
-            }
 
+            // 先に新しいラウンド開始
             foreach (var p in players)
             {
-                p.Reset();
+                if (!p.hasGoal)
+                {
+                    p.Reset();
+                }
             }
         }
-        else
+
+        // ゴール済みは飛ばす
+        if (players[currentPlayer].hasGoal)
         {
-            //次のプレイヤーがゴール済みならその次のプレイヤーのターンにする
-            if (players[currentPlayer].hasGoal)
-            {
-                NextTurn();
-                return;
-            }
+            NextTurn();
+            return;
         }
     }
     // 酸素数UI
