@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
     public int i = 0;
     public Vector3[] Item_Pos;
 
-    bool Next = true;
+    bool haveItem = true;
 
     void Start()
     {
@@ -335,9 +335,8 @@ public class GameManager : MonoBehaviour
 
                     UpdateUI();
 
-                    DropPanel.SetActive(false);
+                    //DropPanel.SetActive(false);
                     isDice = true;
-
                     NextTurn();
                 }
                 else
@@ -357,6 +356,14 @@ public class GameManager : MonoBehaviour
             if (players[currentPlayer].isCPU == false && index > 4)
             {
                 isMoving = false;
+                for (int i = 0; i <Item_Pos.Length; i++)
+                {
+                    if (Item_Pos[i] == players[currentPlayer].item_position)
+                    {
+                        haveItem = false;
+                    }
+                }
+                if(haveItem == true)
                 ItemPanel.SetActive(true);
             }
             //‚±‚ÌƒvƒŒƒCƒ„[‚ªCPU‚È‚ç
@@ -367,33 +374,45 @@ public class GameManager : MonoBehaviour
 
                 if (cpuChoice == 0 && index > 4)
                 {
-                    item_position = players[currentPlayer].item_position;
-                    players[currentPlayer].ItemUp();
-
-                    TileData tile =
-                     players[currentPlayer]
-                    .points[players[currentPlayer].currentIndex]
-                    .GetComponent<TileData>();
-
-                    if (tile != null && !tile.collected)
+                    for (int i = 0; i < Item_Pos.Length; i++)
                     {
-                        players[currentPlayer].point += tile.point;
-
-                        tile.collected = true;
-
-                        UpdateUI();
+                        if (Item_Pos[i] == players[currentPlayer].item_position)
+                        {
+                            haveItem = false;
+                        }
                     }
-
-                    if (i < Item_Pos.Length)
+                    if (haveItem == true)
                     {
-                        Item_Pos[i] = players[currentPlayer].item_position;
-                        i++;
+                        players[currentPlayer].ItemUp();
+
+                        Item_Index.Add(index);
+
+                        TileData tile =
+                         players[currentPlayer]
+                        .points[players[currentPlayer].currentIndex]
+                        .GetComponent<TileData>();
+
+                        if (tile != null && !tile.collected)
+                        {
+                            players[currentPlayer].point += tile.point;
+
+                            tile.collected = true;
+
+                            UpdateUI();
+                        }
+
+                        if (i < Item_Pos.Length)
+                        {
+                            Item_Pos[i] = players[currentPlayer].item_position;
+                            i++;
+                        }
+
+                        tileManager.ChangeTileColor((players[currentPlayer].currentIndex - 5), Color.gray);
+                        isDice = true;
+
+                        NextTurn();
                     }
-
-                    tileManager.ChangeTileColor((players[currentPlayer].currentIndex - 5), Color.gray);
-                    isDice = true;
-
-                    NextTurn();
+                   
                 }
                 else
                 {
@@ -548,7 +567,7 @@ public class GameManager : MonoBehaviour
         tileManager.ChangeTileColor((players[currentPlayer].currentIndex - 5), Color.gray);
         ItemPanel.SetActive(false);
         isDice = true;
-
+        haveItem = true;
         NextTurn();
     }
 
@@ -561,10 +580,10 @@ public class GameManager : MonoBehaviour
         {
             se.PlayClick();
         }
-
         ItemPanel.SetActive(false);
         isDice = true;
 
+        haveItem = true;
         NextTurn();
     }
     public void OnClickDrop1()
